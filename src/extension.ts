@@ -12,9 +12,9 @@ export function activate(context: vscode.ExtensionContext) {
 		// let path_and_param = "C:\\Users\\simon\\OneDrive\\Documents\\PROGRAMMATION\\LANGAGES\\TypeScript\\GitExtension\\gitextension\\src\\script.bat";
 		require("child_process").exec("C:\\Users\\simon\\OneDrive\\Documents\\PROGRAMMATION\\LANGAGES\\TypeScript\\GitExtension\\gitextension\\src\\script.bat", (err: string, stdout: string, stderr: string) => {
 			if(err){
-				return console.log(err);
+				throw new Error('Error batch script');
 			}
-			console.log(stdout);
+			console.log("ok");
 		});
 	};
 
@@ -25,7 +25,7 @@ export function activate(context: vscode.ExtensionContext) {
 		// Display a message box to the user
 		vscode.window.showInputBox({
 			prompt: 'Type string with no space',
-			placeHolder: 'Commit Name'
+			placeHolder: 'Commit Name'	
 		}).then(value => {
 			if(value === undefined){
 				throw new Error('cancelled');
