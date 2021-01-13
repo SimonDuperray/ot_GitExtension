@@ -25,6 +25,9 @@ for /d %%i in (%cd%\*) do (
    echo git log --oneline
    git log --oneline
    echo --------------------------
+   echo git push -u origin master
+   git push -u origin master
+   echo --------------------------
 
    echo *********************************************************
 )
