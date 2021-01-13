@@ -7,8 +7,7 @@ for /d %%i in (%cd%\*) do (
    echo "%%i"
    cd "%%i"
 
-   cd ..
-   cd ..
+   cd "C:\Users\simon\OneDrive\Documents\PROGRAMMATION\LANGAGES\TypeScript\GitExtension\gitextension"
 
    echo --------------------------
    echo git add .
@@ -19,8 +18,8 @@ for /d %%i in (%cd%\*) do (
    echo --------------------------
    @REM echo git commit -m "%1"
    @REM git commit -m "%1"
-   echo git commit -m "self-name"
-   git commit -m "self-name"
+   echo git commit -m "second-self-name"
+   git commit -m "second-self-name"
    echo --------------------------
    echo git log --oneline
    git log --oneline

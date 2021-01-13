@@ -9,8 +9,8 @@ export function activate(context: vscode.ExtensionContext) {
 
 	const run_batch = (commit: string) => {
 		// run script with given commit name in parameter
-		let path_and_param = "C:\\Users\\simon\\OneDrive\\Documents\\PROGRAMMATION\\LANGAGES\\TypeScript\\GitExtension\\gitextension\\src\\script.bat";
-		require("child_process").exec(path_and_param, (err: string, stdout: string, stderr: string) => {
+		// let path_and_param = "C:\\Users\\simon\\OneDrive\\Documents\\PROGRAMMATION\\LANGAGES\\TypeScript\\GitExtension\\gitextension\\src\\script.bat";
+		require("child_process").exec("C:\\Users\\simon\\OneDrive\\Documents\\PROGRAMMATION\\LANGAGES\\TypeScript\\GitExtension\\gitextension\\src\\script.bat", (err: string, stdout: string, stderr: string) => {
 			if(err){
 				return console.log(err);
 			}
