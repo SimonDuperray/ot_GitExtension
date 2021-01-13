@@ -1,11 +1,11 @@
 @echo off
 
-for /d %%i in (%cd%\*) do (
+@REM for /d %%i in (%cd%\*) do (
  
    echo *********************************************************
 
-   echo "%%i"
-   cd "%%i"
+   @REM echo "%%i"
+   @REM cd "%%i"
 
    cd "C:\Users\simon\OneDrive\Documents\PROGRAMMATION\LANGAGES\TypeScript\GitExtension\gitextension"
 
@@ -18,8 +18,8 @@ for /d %%i in (%cd%\*) do (
    echo --------------------------
    @REM echo git commit -m "%1"
    @REM git commit -m "%1"
-   echo git commit -m "second-self-name"
-   git commit -m "second-self-name"
+   echo git commit -m "third-self-name"
+   git commit -m "third-self-name"
    echo --------------------------
    echo git log --oneline
    git log --oneline
@@ -29,6 +29,4 @@ for /d %%i in (%cd%\*) do (
    echo --------------------------
 
    echo *********************************************************
-)
-
-cd ..
+@REM )
