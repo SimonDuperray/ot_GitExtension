@@ -1,7 +1,5 @@
 @echo off
 
-REM set /p git_command="Type your command: "
-
 for /d %%i in (%cd%\*) do (
  
    echo *********************************************************
@@ -19,8 +17,10 @@ for /d %%i in (%cd%\*) do (
    echo git status
    git status
    echo --------------------------
-   echo git commit -m "%1"
-   git commit -m "%1"
+   @REM echo git commit -m "%1"
+   @REM git commit -m "%1"
+   echo git commit -m "self-name"
+   git commit -m "self-name"
    echo --------------------------
    echo git log --oneline
    git log --oneline
